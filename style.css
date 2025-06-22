@@ -1,0 +1,192 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Orbitron', sans-serif;
+    background: #000;
+    overflow: hidden;
+}
+
+.response-output {
+    font-size: 1.1rem;
+    width: 80%;
+    max-width: 500px;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgba(0, 245, 255, 0.05);
+    border: 2px solid #00f5ff;
+    color: #00f5ff;
+    box-shadow: 0 0 10px #00f5ff44;
+    text-align: center;
+    min-height: 50px;
+    white-space: pre-wrap;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Fullscreen UI container */
+.ui {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #00f5ff;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Animated BG */
+#bg-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #00f5ff1a 1px, transparent 1px),
+                radial-gradient(circle, #00f5ff1a 1px, transparent 1px);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
+    animation: moveBackground 60s linear infinite;
+    z-index: 1;
+}
+
+@keyframes moveBackground {
+    0% { background-position: 0 0, 10px 10px; }
+    100% { background-position: 1000px 1000px, 1010px 1010px; }
+}
+
+/* Headings */
+.title {
+    font-size: 4rem;
+    color: #00f5ff;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+.heart {
+    color: #ff0077;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+/* Glowing Start */
+.glow {
+    background-color: transparent;
+    color: #00f5ff;
+    border: 2px solid #00f5ff;
+    box-shadow: 0 0 10px #00f5ff, 0 0 20px #00f5ff44;
+}
+
+.glow:hover {
+    background-color: #00f5ff;
+    color: #000;
+    box-shadow: 0 0 20px #00f5ff, 0 0 30px #00f5ff77;
+}
+
+/* Glowing Stop */
+.glow-red {
+    background-color: transparent;
+    color: #ff004c;
+    border: 2px solid #ff004c;
+    box-shadow: 0 0 10px #ff004c, 0 0 20px #ff004c44;
+}
+
+.glow-red:hover {
+    background-color: #ff004c;
+    color: #000;
+    box-shadow: 0 0 20px #ff004c, 0 0 30px #ff004c77;
+}
+
+/* Voice Box */
+#voice-box {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: #00f5ff;
+}
+
+#voice-box input {
+    padding: 10px 20px;
+    width: 80%;
+    max-width: 500px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid #00f5ff;
+    background-color: #000;
+    color: #00f5ff;
+    text-align: center;
+    box-shadow: 0 0 10px #00f5ff44;
+}
+
+/* Response Box */
+#response-box {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: #00f5ff;
+}
+
+#response-box input {
+    padding: 10px 20px;
+    width: 80%;
+    max-width: 500px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid #00f5ff;
+    background-color: #000;
+    color: #00f5ff;
+    text-align: center;
+    box-shadow: 0 0 10px #00f5ff44;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    font-size: 0.8rem;
+    color: #aaa;
+    padding-top: 2rem;
+}

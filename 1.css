@@ -1,0 +1,59 @@
+h4{
+          color: white;
+      }
+      h1{
+          color: pink;
+          font-family:serif;
+          text-align:center;
+      }
+      body{
+          background-color: black;
+      }
+      #start{
+          margin-top: 100px;
+          margin-left: 102px;
+          text-align: center;
+          height: 45px;
+          width: 85px;
+          color: blue;
+          background-color: yellow;
+          border-radius: 0.2rem;
+      }
+      #stop{
+          text-align: center;
+          height: 45px;
+          width: 85px;
+          color: blue;
+          background-color: red;
+          border-radius: 0.2rem;
+      }
+      
+     #mode {
+    position: fixed;
+    top: 20px; /* Adjust the top position as needed */
+    right: 20px; /* Adjust the right position as needed */
+    background-color: yellow;
+    text-align: center;
+    height: 45px;
+    width: 85px;
+    z-index: 1000; /* Ensure it's above other elements if necessary */
+}
+
+      
+
+@keyframes moveImage {
+        0% { transform: translateY(0); } /* Starting position */
+        100% { transform: translateY(25px); } /* Ending position */
+    }
+.moving-image {
+       /* position: relative;*/
+        animation: moveImage 1.5s ease-in-out infinite alternate; /* Adjust timing and iteration as needed */
+        width: 30%;
+  /*margin: 0px auto -30px auto;*/
+  margin-bottom: 100%;
+  padding: 5px;
+  
+    }
+    .text-blink {
+  animation: blink 1s step-end infinite;
+}

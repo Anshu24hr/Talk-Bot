@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meena 👸 AI Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="bg-animation"></div>
+
+  <div class="ui">
+    <h1 class="title">Meena 👸</h1>
+    <h4 class="subtitle">Cᴏᴅᴇᴅ ᴡɪᴛʜ <span class="heart">♥</span> ʙʏ 🄰🄽🅂🄷🅄</h4>
+
+    <div class="buttons">
+      <button id="start" class="btn glow">Start</button>
+      <button id="stop" class="btn glow-red">Stop</button>
+    </div>
+
+    <!-- Voice Box -->
+    <div id="voice-box" class="hidden">
+      <label for="speechInput">You said:</label>
+      <input type="text" id="speechInput" readonly />
+    </div>
+
+    <!-- Response Box -->
+<div id="response-box" class="hidden">
+  <label for="responseOutput">Meena says:</label>
+  <div id="responseOutput" class="response-output"></div>
+</div>
+
+
+    <footer>
+      <p>&copy; 2025 Meena AI | Intelligent Assistant</p>
+    </footer>
+  </div>
+
+  <!-- Audio Files -->
+  <audio id="music1"><source src="song1.mp3" type="audio/mpeg"></audio>
+  <audio id="music2"><source src="song2.mp3" type="audio/mpeg"></audio>
+  <audio id="music3"><source src="song3.mp3" type="audio/mpeg"></audio>
+  <audio id="music4"><source src="song4.mp3" type="audio/mpeg"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

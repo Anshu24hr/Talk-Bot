@@ -24,15 +24,13 @@ recognition.onstart = function (){
 recognition.onresult = function(event){
     let current = event.resultIndex;
     let recorded = event.results[current][0].transcript;
-    recorded = recorded.toLowerCase();
-        
-    
-    
+    recorded = recorded.toLowerCase();   
     
     console.log(`Me : ${recorded}`)
     
-    
-    
+    document.getElementById("voice-box").classList.remove("hidden");
+    document.getElementById("speechInput").value = recorded;
+     
     if(recorded.includes("hello")){
         
         let now = new Date();

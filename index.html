@@ -1,48 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meena 👸 AI Assistant</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
-</head>
-<body>
-  <div id="bg-animation"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meena 👸 AI Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="bg-animation"></div>
 
-  <div class="ui">
-    <h1 class="title">Meena 👸</h1>
-    <h4 class="subtitle">Cᴏᴅᴇᴅ ᴡɪᴛʜ <span class="heart">♥</span> ʙʏ 🄰🄽🅂🄷🅄</h4>
+    <div class="ui">
+      <h1 class="title">Meena 👸</h1>
+      <h4 class="subtitle">Cᴏᴅᴇᴅ ᴡɪᴛʜ <span class="heart">♥</span> ʙʏ 🄰🄽🅂🄷🅄</h4>
 
-    <div class="buttons">
-      <button id="start" class="btn glow">Start</button>
-      <button id="stop" class="btn glow-red">Stop</button>
+      <div class="buttons">
+        <button id="start" class="btn glow">Start</button>
+        <button id="stop" class="btn glow-red">Stop</button>
+      </div>
+
+      <!-- Voice Box -->
+      <div id="voice-box" class="hidden">
+        <label for="speechInput">You said:</label>
+        <input type="text" id="speechInput" readonly />
+      </div>
+
+      <!-- Response Box -->
+      <div id="response-box" class="hidden">
+        <label for="responseOutput">Meena says:</label>
+        <div id="responseOutput" class="response-output"></div>
+      </div>
+
+      <!-- Commands Overlay -->
+      <div id="commandOverlay" class="overlay">
+        <div class="overlay-box">
+          <h2>Meena Commands Guide 👸</h2>
+
+          <ul>
+            <ul>
+              <li>1. Hello Meena.</li>
+
+              <li>2. What is your name.</li>
+
+              <li>3. Who is your developer.</li>
+
+              <li>4. Open YouTube.</li>
+
+              <li>5. Search on YouTube "Jo search karna hai oo bolo".</li>
+
+              <li>6. Open Google.</li>
+
+              <li>7. Search on Google "Jo search karna hai oo bolo". </li>
+
+              <li>8. Open Gmail.</li>
+
+              <li>9. Open Instagram.</li>
+       
+              <li>10. Play Song.</li>
+
+              <li>11. Play Sad Song.</li>
+
+              <li>12. Play Another Song.</li>
+
+              <li>13. Play Dance Song.</li>
+
+              <li>14. What Time it is?. </li>
+
+              <li>15. Turn On Dark Mode.</li>
+
+              <li>16. Turn On Light Mode.</li>
+
+              <li>17. Open Calculate.</li>
+
+              <li>18. Search a Movie "Your Movie Name".</li>
+
+              <li>19. What you think about me.</li>
+            </ul>
+          </ul>
+
+          <button id="minimizeOverlay">Minimize</button>
+        </div>
+      </div>
+
+      <!-- Help Button -->
+      <button id="helpBtn">?</button>
+
+      <footer>
+        <p>&copy; 2025 Meena AI | Intelligent Assistant</p>
+      </footer>
     </div>
 
-    <!-- Voice Box -->
-    <div id="voice-box" class="hidden">
-      <label for="speechInput">You said:</label>
-      <input type="text" id="speechInput" readonly />
-    </div>
+    <!-- Audio Files -->
+    <audio id="music1"><source src="song1.mp3" type="audio/mpeg" /></audio>
+    <audio id="music2"><source src="song2.mp3" type="audio/mpeg" /></audio>
+    <audio id="music3"><source src="song3.mp3" type="audio/mpeg" /></audio>
+    <audio id="music4"><source src="song4.mp3" type="audio/mpeg" /></audio>
 
-    <!-- Response Box -->
-<div id="response-box" class="hidden">
-  <label for="responseOutput">Meena says:</label>
-  <div id="responseOutput" class="response-output"></div>
-</div>
-
-
-    <footer>
-      <p>&copy; 2025 Meena AI | Intelligent Assistant</p>
-    </footer>
-  </div>
-
-  <!-- Audio Files -->
-  <audio id="music1"><source src="song1.mp3" type="audio/mpeg"></audio>
-  <audio id="music2"><source src="song2.mp3" type="audio/mpeg"></audio>
-  <audio id="music3"><source src="song3.mp3" type="audio/mpeg"></audio>
-  <audio id="music4"><source src="song4.mp3" type="audio/mpeg"></audio>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

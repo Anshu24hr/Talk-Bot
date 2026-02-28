@@ -135,11 +135,11 @@ recognition.onresult = function(event){
         document.querySelector('body').style.backgroundColor="white";
         document.querySelector('h4').style.color="black";
     }
-    if(recorded.includes("play sad song")){
-        readOut("playing sad song")
+    if(recorded.includes("play song")){
+        readOut("playing song, Udaarian")
         music1.play();
     }
-    if(recorded.includes("play another sad song")){
+    if(recorded.includes("play sad song")){
         music2.play();
     }
     if(recorded.includes("play another song")){
@@ -313,9 +313,33 @@ function showResponseTyping(message) {
 
 
 
-//example
 
+// Overlay Controls
 
+const overlay = document.getElementById("commandOverlay");
+const minimizeBtn = document.getElementById("minimizeOverlay");
+const helpBtn = document.getElementById("helpBtn");
+
+// First time open
+window.addEventListener("load",()=>{
+
+overlay.style.display="flex";
+
+});
+
+// Minimize
+minimizeBtn.addEventListener("click",()=>{
+
+overlay.style.display="none";
+
+});
+
+// Help Button Open
+helpBtn.addEventListener("click",()=>{
+
+overlay.style.display="flex";
+
+});
 
 
 window.onload = function(){
